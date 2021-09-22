@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary-color:#047aed;
+}
+
+body{
+    font-family: 'lato' sans-serif;
+    line-height: 1.6;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+
+}
+p{
+    margin: 10px 0;
+
+}
+img{
+    width: 100%;
+
+}
+ /* nav bar */
+ .navbar{
+     background-color: #047aed;
+     color: #fff;
+     height: 70px;
+ }
+ .navbar ul{
+     display: flex;
+ }
+ .navbar a{
+     padding: 10px;
+     color: #fff;
+     margin: 0 5px;
+     transition:0.3s ;
+ }
+ .navbar a:hover{
+  border-bottom: 1px #fff solid;
+ 
+}
+/* showcase */
+.showcase{
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+    
+}
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    
+
+}
+.showcase-form .form-control{
+    margin: 30px 0;
+    
+}
+.showcase-form input:focus{
+    outline: none;
+}
+/* utilities */
+ .container{
+     max-width: 1100px;
+     margin: 0 auto;
+ }
+ .flex{
+     display: flex;
+     align-items: center;
+     height: 100%;
+     
+ }
+ .navbar > .flex{
+     justify-content: space-between;
+ }
+ .grid{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     
+ }
+ .showcase-form input[type="text"],
+ /* .showcase-form input[type="password"], */
+ .showcase-form input[type="email"]{
+     border: 0;
+     border-bottom: 1px solid #b4becd;
+     width: 100%;
+     padding: 3px;
+     font-size: 16px;
+     transition: 0.5s;
+     
+ }
+ .showcase-form input[type="text"]:focus,
+ .showcase-form input[type="password"]:focus,
+ .showcase-form input[type="email"]:focus{
+
+    border-bottom: 3px solid #047aed;
+    border-radius: 7px;
+
+ }
+ .card{
+     background-color: #fff;
+     height: 300px;
+     width: 400px;
+     color: #333;
+     position: absolute;
+     top: 150px;
+     right: 40px;
+     border: 1px solid black;
+     border-radius: 4px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     
+     
+ }
+ 
+.button{
+    background: none;
+    box-shadow: 0 5px 15px -5px #bbb;
+    font-family: roboto;
+    font-size: 14px;
+    height: 50px;
+    overflow: hidden;
+    border: solid 2px#047aed;
+    color:#047aed;
+    padding:5px;
+    margin-left: 60px;
+    cursor: pointer;
+    position: relative;
+    width:150px;
+    transform: perspective(1px);
+    transition: color .2s ease-out;
+}
+.button::before{
+    background-color:#047aed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: transform .3s ease-out;
+}
+.button:hover{
+    color: #fff;
+}
+
+
+.button-five:hover::before{
+    transform:translate(-50%,-50%) rotate(138deg) scaleY(4);
+
+}
+.button-five::before{
+   
+    transform:translate(-50%,-50%) rotate(135deg) scaleY(0);
+    width: 100%;
+    left: 50%;
+    right: 50%;
+}
+.button-five:active::before{
+    transform:translate(-50%,-50%) rotate(135deg) scaleY(10); 
+}
